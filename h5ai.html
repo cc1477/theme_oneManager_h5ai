@@ -209,6 +209,11 @@
 
     
     <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const logoLink = document.querySelector('.logo a');
+    logoLink.href = 'https://hitokoto.cn/';
+    logoLink.innerText = '一言';
+  });
 
         var typeList = {
             jpg: "img",
