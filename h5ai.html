@@ -112,7 +112,7 @@
 
 <body>
     <header>
-        <h2 class="logo"><a href="<!--base_path-->"><!--Sitename--></a></h2>
+        <h2 class="logo"><a href="" id="hitokotoText">获取中...</a></h2>
         <div class="bread-wrap" id="breadScroll">
             <div class="bread" id="bread">
                 <!--PathArrayStart-->
@@ -209,12 +209,14 @@
 
     
     <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const logoLink = document.querySelector('.logo a');
-    logoLink.href = 'https://hitokoto.cn/';
-    logoLink.innerText = '一言';
-  });
-
+        fetch('https://v1.hitokoto.cn')
+         .then(response => response.json())
+         .then(data => {
+           const hitokoto =      document.querySelector('#hitokoto_text')
+           hitokoto.href = `https://hitokoto.cn/?uuid=${data.uuid}`
+           hitokoto.innerText = data.hitokoto
+         })
+         .catch(console.error)
         var typeList = {
             jpg: "img",
             jpeg: "img",
