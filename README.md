@@ -6,11 +6,6 @@
 2. 支持密码访问加密文件
 3. 适配PC端和移动端
 
-### 复制html文件到theme文件夹即可！ ###
-
-![image](https://s3.ax1x.com/2020/11/25/DUgEXq.png)
-
-![image](https://s3.ax1x.com/2020/11/25/DUgk1s.png)
-
-![image](https://s3.ax1x.com/2020/11/25/DUgAcn.png)
-
+二改增加
+win 半透明背景图
+标题一言
